@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>kate’s class website</title>
+    <title>Kate’s Class Website</title>
     <link rel="icon" type="image/png" href="images/pear.png"/>
   </head>
   <body>
