@@ -1,0 +1,74 @@
+img {
+  height: 400px;
+  display: block;
+}
+
+#img-0 {
+  position: relative;
+  width: 20%;
+  height: 20%;
+  left: 80px;
+
+}
+
+#img-1 {
+  position: absolute;
+  width: 50%;
+  top: 495px;
+  left: 600px;
+height: initial;
+}
+
+#img-2 {
+  width: 8%;
+  height: initial;
+  position: absolute;
+  left: 425px;
+  top: 750px;
+}
+
+#img-3 {
+  position: relative;
+  top: 300px;
+  left: 170px;
+  width: 20%;
+  height: initial;
+}
+
+#img-4 {
+
+}
+
+#img-5 {
+  
+}
+
+#img-6 {
+  
+}
+
+#img-7 {
+  
+}
+
+#img-8 {
+  
+}
+
+#img-9 {
+  position: fixed;
+  top: 60px;
+  right: 50px;
+}
+
+#img-10 {
+  
+}
+
+#img-11 {
+  width: 60%;
+  position: relative;
+  height: 60%;
+  top: 50px;
+  left: 200px;
+}

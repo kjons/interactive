@@ -1,0 +1,52 @@
+     @font-face {
+      font-family: Grotesk; 
+      src: url("fonts/AkzidenzGroteskLight.ttf");
+    }
+      @font-face { 
+        font-family: Apercu;
+        src: url("fonts/ApercuMonoProBold.ttf");
+    }
+    body {
+      line-height: 1.25;
+      font-size: 125%;
+      font-family: Helvetica, sans-serif;
+      background-color: black;
+      color: white;
+      padding-left: 30px;
+      margin-right: 40vw;
+    } 
+    h1 {
+      letter-spacing: 1px;
+      font-size: 200%;
+      color: white;
+      text-align: left;
+      font-family: Apercu;
+      padding: 30px;
+    }
+    h3 {
+      letter-spacing: 1px;
+      font-family: Apercu;
+      color: white;
+      padding-left: 30px;
+    }
+    h4 {
+      letter-spacing: 1px;
+      font-family: Apercu;
+      font-size: 75%;
+      color: white;
+      padding-left: 60px;
+    }
+    a {
+      color: white;
+    }
+    a:hover{
+      color: lime;
+    }
+    img {
+      height: 400px;
+      display:inline;
+      padding-top:100px;
+    }
+    ul {
+      padding:none;
+    }
