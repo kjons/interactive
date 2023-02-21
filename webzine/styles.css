@@ -12,7 +12,7 @@
       font-family: Helvetica, sans-serif;
       background-color: black;
       color: white;
-      padding-left: 30px;
+      padding-left: 60px;
       margin-right: 40vw;
     } 
     h1 {
@@ -27,14 +27,12 @@
       letter-spacing: 1px;
       font-family: Apercu;
       color: white;
-      padding-left: 30px;
     }
     h4 {
       letter-spacing: 1px;
       font-family: Apercu;
       font-size: 75%;
       color: white;
-      padding-left: 60px;
     }
     a {
       color: white;
