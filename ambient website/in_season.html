@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>fruits in season</title>
+    <link rel="icon" type="image/png" href="images/pear.png"/>
+    <style>
+      @font-face {
+        font-family: CustomFont;
+        src: url("fonts/ApercuMonoProRegular.ttf");
+      }
+      body {
+        background-color: #E6E3D3;
+        font-family: Helvetica, sans-serif;
+        color: #019A33;
+        font-weight: normal;
+        padding:2vw;
+        text-align: center;
+      }
+      h1 {
+      	color: black;
+      	font: Helvetica, sans-serif;
+      	font-size: medium;
+      	font-weight: normal;
+      	padding: 1vw
+      }
+ .column {
+  display: inline-block;
+  float: left;
+  width: 31%;
+  padding:.5em;
+}
+.row {
+  padding-bottom:2em;
+}
+      .winter {
+      }
+      .spring {
+      	position: relative;
+      	display: inline-block;
+      	animation: mymove 2s;
+      	animation-timing-function: ease;
+      	animation-iteration-count: infinite;
+      }
+@keyframes mymove {
+  0% {left: 0em;}
+  25% {left: 1em;}
+  50% {left: -1em;}
+  100% {left:0em;}
+      }
+      .summer {
+      }
+      .fall{}
+
+      .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 850px) {
+  .column {
+    width: 100%;
+  }
+    </style>
+  </head>
+  <body>
+  	<h1 id="greeting"></h1><br>
+  	<div class="row">
+  		<div class="column">
+  	<span class="fall">apple</span><br><br>
+  	<span class="spring">apricot</span><br><br>
+  	<span class="spring">artichoke</span><br><br>
+  	<span class="spring">asparagus</span><br><br>
+  	<span class="spring">avocado</span><br><br>
+  	<span class="summer">blackberry</span><br><br>
+  	<span class="summer">blueberry</span><br><br>
+  	<span class="fall">butternut squash</span><br><br>
+  	<span class="spring">carrot</span><br><br>
+  	<span class="fall">cauliflower</span><br><br>
+  	<span class="spring">celeriac</span><br><br>
+  	<span class="summer">cherry</span><br><br>
+  	<span class="winter">chestnut</span><br><br>
+  	<span class="spring">chive</span><br><br>
+  	<span class="summer">corn</span><br><br>
+  	<span class="fall">cranberry</span><br><br>
+  	<span class="summer">cucumber</span><br><br>
+  	<span class="summer">eggplant</span><br><br>
+  	<span class="spring">fava bean</span><br><br>
+  	<span class="spring">fennel</span>
+  </div>
+  <div class="column">
+  	<span class="spring">fiddlehead fern</span><br><br>
+  	<span class="fall">fig</span><br><br>
+  	<span class="fall">garlic</span><br><br>
+  	<span class="fall">ginger</span><br><br>
+  	<span class="fall">grape</span><br><br>
+  	<span class="winter">grapefruit</span><br><br>
+  	<span class="summer">green bean</span><br><br>
+  	<span class="winter">kale</span><br><br>
+  	<span class="spring">leek</span><br><br>
+  	<span class="winter">lemon</span><br><br>
+  	<span class="spring">mango</span><br><br>
+  	<span class="spring">morel</span><br><br>
+  	<span class="fall">mushroom</span><br><br>
+  	<span class="spring">mustard greens</span><br><br>
+  	<span class="summer">nectarine</span><br><br>
+  	<span class="spring">onion</span><br><br>
+  	<span class="winter">orange</span><br><br>
+  	<span class="winter">parsnip</span><br><br>
+  	<span class="summer">peach</span><br><br>
+  	<span class="fall">pear</span>
+    </div>
+   <div class="column">
+  	<span class="spring">pea</span><br><br>
+   	<span class="spring">pineapple</span><br><br>
+   	<span class="summer">plum</span><br><br>
+   	<span class="fall">pomegranate</span><br><br>
+  	<span class="fall">potato</span><br><br>
+  	<span class="fall">pumpkin</span><br><br>
+  	<span class="fall">quince</span><br><br>
+  	<span class="winter">radicchio</span><br><br>
+  	<span class="winter">radish</span><br><br>
+  	<span class="summer">raspberry</span><br><br>
+  	<span class="spring">rhubarb</span><br><br>
+  	<span class="winter">rutabaga</span><br><br>
+  	<span class="summer">strawberry</span><br><br>
+  	<span class="fall">sweet potato</span><br><br>
+  	<span class="fall">swiss chard</span><br><br>
+  	<span class="winter">tangerine</span><br><br>
+  	<span class="summer">tomato</span><br><br>
+  	<span class="winter">turnip</span><br><br>
+  	<span class="summer">watermelon</span><br><br>
+  	<span class="summer">zucchini</span><br><br>
+  </div>
+</div>
+    <div>
+        <a href=images/>
+      </div>
+      <br>
+      <script>
+const d = new Date("3/26/2023");
+
+var seasonArray = [
+    {name: 'spring', date: new Date(d.getFullYear(),2,(d.getFullYear() % 4 === 0) ? 20 : 21).getTime()},
+    {name: 'summer', date: new Date(d.getFullYear(),5,(d.getFullYear() % 4 === 0) ? 20 : 21).getTime()},
+    {name: 'autumn', date: new Date(d.getFullYear(),8,(d.getFullYear() % 4 === 0) ? 22 : 23).getTime()},
+    {name: 'winter', date: new Date(d.getFullYear(),11,(d.getFullYear() % 4 === 0) ? 20 : 21).getTime()}
+];
+
+const season = seasonArray.filter(({ date }) => date <= d).slice(-1)[0] || {name: "winter"}
+
+var greeting = document.getElementById("greeting");
+greeting.innerHTML = "It is "+ season.name + " in the northern hemisphere."; 
+
+if (season.name == "spring") {
+	document.body.style.color = "peach";
+}
+else if (season.name == "winter") {
+	document.body.style.color = "blueberry";
+}
+else if (season.name == "autumn") {
+	document.body.style.color = "orange";
+}
+else {
+	document.body.style.color = "pink";
+};
+  </script>
+  </body>
+</html>
+
+    
+    
+    
+
+
+      
