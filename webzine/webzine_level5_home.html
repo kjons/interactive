@@ -8,6 +8,17 @@
         font-family: Apercu;
         src: url("fonts/ApercuMonoProBold.ttf");
     }
+.bg-color-1 {
+  background-color: magenta;
+}
+
+.bg-color-2 {
+  background-color: cyan;
+}
+
+.bg-color-3 {
+  background-color: yellow; 
+}
       body {
       font-family: Times; serif
       color: black;
@@ -15,7 +26,7 @@
       padding-left:60px;
       padding-right:60px;
       text-align: left;
-      background-color: #FFC4FF;
+      background-color: ;
     }
   a {
       color: black;
@@ -74,7 +85,8 @@ h4 {
   }
   </style>
 </head>
-<body>
+<body class="bg-color-1 bg-color-2 bg-color-3">
+  <div id="background-color"></div>
   <div class="header">
     <h1>THE <span class="typo"></span> OF GENDER</h1>
   </div>
@@ -101,5 +113,10 @@ h4 {
         <div class="footer">
               <h4><a href="webzine_level5_about.html">ABOUT</a></h4>
             </div>
+<script>
+var randomNum = Math.floor(Math.random() * 3) + 1;
+document.body.classList.remove('bg-color-1', 'bg-color-2', 'bg-color-3');
+document.body.classList.add('bg-color-' + randomNum);
+</script>
 </body>
 </html>

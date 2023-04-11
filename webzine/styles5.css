@@ -2,6 +2,13 @@
         font-family: Apercu;
         src: url("fonts/ApercuMonoProBold.ttf");
     }
+    
+    @keyframes bg {
+  0%   {background-color: magenta;}
+  50%  {background-color: cyan;}
+  100% {background-color: yellow;}
+}
+
       body {
       font-family: Times; serif
       color: black;
@@ -11,7 +18,12 @@
       margin-top:5vw;
       text-align: left;
       background-color: #FFC4FF;
+      animation-name: bg;
+      animation-duration: 24s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
     }
+
   a {
       color: black;
     }

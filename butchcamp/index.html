@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Butchcamp</title>
+  <link rel="icon" type="image/png" href="fav.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <i class="icon top-left"></i>
+  <i class="icon top-right"></i>
+  <i class="icon bottom-left"></i>
+  <i class="icon bottom-right"></i>
+  <div>
+<br>
+<br>
+<br>
+<br>
+  <img src="BCsplash.svg" id="logo" style="display:none;" onclick="toggleImage()">
+  <img src="BC.svg" id="image"><br>
+    <br>
+  </div>
+<script>
+var images = [
+  "images/barbra.jpg",
+  "images/jett.jpg",
+  "images/jett2.jpg",
+  "images/jett3.jpg",
+  "images/gladys.png",
+  "images/barbra2.jpg",
+  "images/castle1.jpg",
+  "images/nan1.jpg",
+  "images/sontag1.jpeg",
+  "images/sontag2.jpg",
+  "images/sontag3.jpg",
+  "images/sophie2.png",
+  "images/beatondiary.jpg",
+  "images/williebraids.jpeg",
+  "images/nan2.jpg",
+  "images/nan3.jpg",
+  "images/strangeinterludes.jpg",
+  "images/strangeinterludes2.jpg",
+  "images/pat1.jpg",
+  "images/pat2.jpg",
+  "images/alwaysmademoiselle.jpg",
+  "images/kalinda.jpg",
+  "images/kalinda2.jpg",
+  "images/foujita.jpg",
+  "images/garbo2.jpg",
+  "images/garbokey.jpg",
+  "images/garbopillow.jpg",
+  "images/garbovidal.jpg",
+  "images/rossellini.jpg",
+  "images/missmoffat.jpg",
+  "images/gretasrose.jpg",
+  "images/pauline.jpg",
+  "images/polly.jpg",
+  "images/maupin.jpg",
+  "images/maupin2.jpg",
+  "images/forthecure1.jpg",
+  "images/forthecure2.jpg",
+  "images/annie.jpg",
+  "images/dianaandliz.jpg",
+  "images/patbuckley.jpg",
+  "images/patbuckley2.jpg",
+  "images/patbuckley3.jpg",
+  "images/aubigny.jpg",
+  "images/elsa.jpg",
+  "images/slim.jpg",
+  "images/kdlang.jpg",
+  "images/beth.jpg",
+  "images/queenofhearts.jpg",
+  "images/hearts.jpg",
+  "images/suze.jpg",
+  "images/dollyandjudy.jpg",
+  "images/dollyandjudy2.jpg",
+  "images/anniehalloween.jpg",
+  "images/tracy.jpg"
+];
+       function preloadImages() {
+      var imgElements = [];
+      for (var i = 0; i < images.length; i++) {
+        imgElements[i] = new Image();
+        imgElements[i].src = images[i];
+      }
+      return imgElements;
+    }
+
+function cycleImages() {
+  var randomIndex = Math.floor(Math.random() * images.length);
+  var imageElement = document.getElementById("image");
+  var fadeDuration = 1000; // Change this to adjust the duration of the fade animation
+  var fadeFrames = 20; // Change this to adjust the number of fade frames
+  var preloadedImages = preloadImages();
+  var frameDuration = fadeDuration / fadeFrames;
+  for (var i = 0; i < fadeFrames; i++) {
+    setTimeout(function() {
+      var randomIndex = Math.floor(Math.random() * preloadedImages.length);
+      imageElement.src = preloadedImages[randomIndex].src;
+    }, i * frameDuration);
+    if (i >= fadeFrames - 5) {
+      // Gradually increase the frame duration for the last few frames
+      frameDuration += 9;
+    }
+  }
+  setTimeout(function() {
+    imageElement.src = images[randomIndex];
+  }, fadeDuration / 2);
+}
+    document.getElementById("image").addEventListener("click", cycleImages);
+  </script>
+  <script>
+    var timeout;
+
+function resetTimer() {
+    clearTimeout(timeout);
+    timeout = setTimeout(showImage, 6000); // Change to the number of milliseconds after which you want to display the image
+}
+
+function showImage() {
+    document.getElementById("logo").style.display = "block";
+}
+
+document.addEventListener("mousemove", resetTimer);
+document.addEventListener("keypress", resetTimer);
+resetTimer();
+</script>
+<script>
+  function toggleImage() {
+  var image = document.getElementById("logo");
+  if (image.style.display === "block") {
+    image.style.display = "none";
+  } else {
+    image.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
