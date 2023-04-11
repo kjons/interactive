@@ -29,6 +29,13 @@
       a {
         color: palevioletred;
       }
+
+.hidden {
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
     </style>
   </head>
   <body>
@@ -36,19 +43,36 @@
     <br>
     <h2>Class Projects</h2>
     <ul>
-        Project 1: <a href="webzine/webzine_level1.html">Level 1</a>&nbsp;&nbsp;<a href="webzine/webzine_level2.html">Level 2</a>&nbsp;&nbsp;<a href="webzine/webzine_level3.html">Level 3</a>&nbsp;&nbsp;<a href="webzine/webzine_level4_home.html">Level 4</a>&nbsp;&nbsp;<a href="webzine/webzine_level5_home.html">Level 5</a></p>
-
-       <a href="campaign/button_page1.html">Core Campaign</a>
-    </ul>
+        Project 1 (Webzine): <a href="webzine/webzine_level5_home.html">The Typography of Gender</a><br><br>
+        <a href="#" class="click-link">See Levels 1–4</a>
+          <br><br>
+        Project 2 (Billboard): <a href="butchcamp/index.html">Butchcamp</a><br><br>
+        For Prelim Core: <a href="campaign/button_page1.html">What's in a Button?</a>
     <br>
+  </ul>
+  <div class="hidden">
+            <ul>
+            <a href="webzine/webzine_level1.html">Level 1</a><br>
+            <a href="webzine/webzine_level2.html">Level 2</a><br>
+            <a href="webzine/webzine_level3.html">Level 3</a><br>
+            <a href="webzine/webzine_level4_home.html">Level 4</a><br>
+          </ul>
+        </div>
      <br> <img src="images/pomegranate.png" style="padding-left:30px">
-    </div>
     <br>
     <br>
     <div>
         <a href="http://software-for-people.net/">Software for People</a>
       </div>
       <br>
+      <script>
+      const link = document.querySelector('.click-link');
+const hiddenDiv = document.querySelector('.hidden');
+link.addEventListener('click', function(event) {
+  event.preventDefault();
+  hiddenDiv.classList.toggle('show');
+});
+</script>
   </body>
 </html>
 
