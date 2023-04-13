@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Typography of Gender</title>
+  <link rel="icon" type="image/png" href="images/asterisk3.png">
+<style>
+  @font-face { 
+        font-family: Apercu;
+        src: url("fonts/ApercuMonoProBold.ttf");
+    }
+.bg-color-1 {
+  background-color: magenta;
+}
+
+.bg-color-2 {
+  background-color: cyan;
+}
+
+.bg-color-3 {
+  background-color: yellow; 
+}
+      body {
+      font-family: Times; serif
+      color: black;
+      font-size: 1.5em;
+      padding-left:60px;
+      padding-right:60px;
+      text-align: left;
+      background-color: ;
+    }
+  a {
+      color: black;
+    }
+    a:hover:before {
+      content: "*";
+    }
+    a:hover:after {
+      content: "*";
+    }
+.header {
+  float: left;
+  display: inline-block;
+  color: black;
+  font-family: Apercu;
+  padding-top: 1em;
+  font-size: 1em;
+  width: 100%;
+}
+.column {
+  float: left;
+  width: 30%;
+  padding:.5em;
+}
+.row {
+  padding-bottom:2em;
+}
+h3 {
+  letter-spacing: 1px;
+  font-size:1em;
+  font-family: Apercu;
+  color: black;
+  line-height:1.25em;
+}
+h4 {
+  letter-spacing: 1px;
+  font-family: Apercu;
+  font-size: .75em;
+  color: black;
+  line-height:1.25em;
+}
+.typo:after {
+  content:"TYPOGRAPHY";
+}
+.typo:hover:after {
+  content: "#&%*@_?x*#";
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 850px) {
+  .column {
+    width: 100%;
+  }
+  </style>
+</head>
+<body class="bg-color-1 bg-color-2 bg-color-3">
+  <div id="background-color"></div>
+  <div class="header">
+    <h1>THE <span class="typo"></span> OF GENDER</h1>
+  </div>
+  <div class="row">
+    <div class="column" id="column1">
+      <h3 id="shifting"><a href="webzine_genderstar.html">SHIFTING SYMBOLS: THE GENDER STAR</a></h3>
+<p>By Meg Miller <br> Originally published by <u><a href="https://www.sourcetype.com/editorial/5538/shifting-symbols-the-gender-star">Source Type</a></u></p>
+    </div>
+       <div class="column" id="column2">
+         <h3 id="secte"><a href="webzine_secte.html">SECTE: A NEW VOWEL FOR SPANISH</a></h3>
+<p>Originally published by <i><u><a href="https://heraldodemexico.com.mx/cultura/2021/3/10/nuevo-leon-artistas-nortenos-presentan-secte-vocal-inclusiva-para-el-espanol-267944.html">El Heraldo de México</i></u></a></p>
+       </div>
+          <div class="column" id="column3">
+            <h3 id="hack"><a href="webzine_hack.html">HYPOTHETICAL HACK</a></h3>
+  <p>By Sarah Gephart<br>Originally published by <u><a href="http://mgmtdesign.com/digressions/home/type-and-gender/hypothetical-hack/">MGMT Design</u></a></p>
+          </div>
+        </div>
+        <div class="footer">
+              <h4><a href="webzine_about.html">ABOUT</a></h4>
+            </div>
+<script>
+var randomNum = Math.floor(Math.random() * 3) + 1;
+document.body.classList.remove('bg-color-1', 'bg-color-2', 'bg-color-3');
+document.body.classList.add('bg-color-' + randomNum);
+</script>
+</body>
+</html>

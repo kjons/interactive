@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Butchcamp</title>
   <link rel="icon" type="image/png" href="fav.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <i class="icon top-left"></i>
-  <i class="icon top-right"></i>
-  <i class="icon bottom-left"></i>
-  <i class="icon bottom-right"></i>
+  <img id="heart1" src="hearticon1.png">
+  <img id="heart2" src="hearticon2.png">
+  <div id="info">
+    <p>This will be information.</p>
+  </div>
   <div>
 <br>
 <br>
@@ -109,20 +111,37 @@ function cycleImages() {
     document.getElementById("image").addEventListener("click", cycleImages);
   </script>
   <script>
+
     var timeout;
+    var timer_running = false;
 
 function resetTimer() {
-    clearTimeout(timeout);
-    timeout = setTimeout(showImage, 6000); // Change to the number of milliseconds after which you want to display the image
+  console.log(timer_running);
+  if (timer_running == true) {
+     clearTimeout(timeout);
+      timeout = setTimeout(showImage, 6000); // Change to the number of milliseconds after which you want to display the image
+  } else {
+    return;
+  }
 }
 
 function showImage() {
     document.getElementById("logo").style.display = "block";
 }
 
+function startTimer() {
+  console.log(timer_running);
+  timer_running = true;
+  resetTimer();
+}
+
 document.addEventListener("mousemove", resetTimer);
 document.addEventListener("keypress", resetTimer);
-resetTimer();
+document.getElementById("image").addEventListener("click", startTimer);
+// resetTimer();
+console.log(timer_running);
+
+
 </script>
 <script>
   function toggleImage() {
@@ -133,6 +152,20 @@ resetTimer();
     image.style.display = "none";
   }
 }
+</script>
+<script> 
+  document.getElementById('heart1').onclick=function() {
+
+    console.log("heart clicked!");
+
+    if (document.getElementById("info").style.display == "block" ) {
+      document.getElementById("info").style.display="none"; 
+    } else {
+      document.getElementById("info").style.display="block";  
+    }
+  
+  }
+
 </script>
 </body>
 </html>
