@@ -10,7 +10,11 @@
   <img id="heart1" src="hearticon1.png">
   <img id="heart2" src="hearticon2.png">
   <div id="info">
-    <p>This will be information.</p>
+    <p>"Started by Isa Toledo and Rosen Eveleigh, BUTCHCAMP is an online project and archive that visually and thematically represents a vertigent of the camp aesthetic which is closely tied to lesbianism, and somewhat away from the commercialized gay male epicentre." <br>—Mykki Blanco</p><br>
+  </div>
+  <div id="credit">
+    <p>Project by Isa Toledo and Rosen Eveleigh.</p>
+    <p>Site design by Kate Johnson.</p>
   </div>
   <div>
 <br>
@@ -162,6 +166,20 @@ console.log(timer_running);
       document.getElementById("info").style.display="none"; 
     } else {
       document.getElementById("info").style.display="block";  
+    }
+  
+  }
+
+</script>
+<script> 
+  document.getElementById('heart2').onclick=function() {
+
+    console.log("heart clicked!");
+
+    if (document.getElementById("credit").style.display == "block" ) {
+      document.getElementById("credit").style.display="none"; 
+    } else {
+      document.getElementById("credit").style.display="block";  
     }
   
   }
