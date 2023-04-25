@@ -5,17 +5,24 @@
 
 body {
   font-family: Selavy; Helvetica;
-      font-size: 4em;
+      font-size: 3em;
       text-align: center;
       color: black;
-      background-image: url("background.jpg");  
+      background-image: url("background.jpg"); 
+      background-size: 700px;
+      background-position: center top;
+      background-repeat: no-repeat; 
       background-color: lightpink;
     }
 
 p {
   display: block;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-bottom: 100px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 
 }
 
