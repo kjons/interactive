@@ -13,8 +13,9 @@ body {
       font-size: 15vw;
       text-align: center;
       color: black;
+      -webkit-text-stroke: 2px orangered;
       background-image: url("background.jpg"); 
-      background-size: 700px;
+      background-size: cover;
       background-position: center top;
       background-repeat: no-repeat; 
       background-color: orangered;
