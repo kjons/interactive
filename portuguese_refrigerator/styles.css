@@ -3,30 +3,33 @@
       src: url("Selavy.otf");
     }
 
+@font-face {
+      font-family: Cinetype; 
+      src: url("GT-Cinetype-Mono.otf");
+    }
+
 body {
-  font-family: Selavy; Helvetica;
-      font-size: 3em;
+  font-family: Cinetype; Helvetica;
+      font-size: 15vw;
       text-align: center;
       color: black;
       background-image: url("background.jpg"); 
       background-size: 700px;
       background-position: center top;
       background-repeat: no-repeat; 
-      background-color: lightpink;
+      background-color: orangered;
     }
 
 p {
   display: block;
-  margin-top: 150px;
+  margin-top: 130px;
   margin-bottom: 100px;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   body {
-    width: 90vw;
+    background-size: cover;
   }
