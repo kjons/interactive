@@ -27,12 +27,6 @@
       a {
         color: orangered;
       }
-      .hidden {
-  display: none;
-  background-color: white;
-  border: 1px solid black;
-  padding: 10px;
-}
 
 @media screen and (max-width: 600px) {
   body {
@@ -43,40 +37,46 @@
   <body>
     <h1 id="heading">Kate’s Class Website</h1>
     <br>
-    <h2>Class Projects</h2>
+    <h2>&#10047; Class Projects</h2>
     <ul>
         Project 1 (Webzine): <a href="webzine/webzine_level5_home.html">The Typography of Gender</a><br><br>
-        <a href="#" class="click-link">See Levels 1–4</a>
-          <br><br>
-        Project 2 (Billboard): <a href="butchcamp/index.html">Butchcamp</a><br><br>
-        Project 3 (Website for One): <a href="portuguese_refrigerator/index.html">Portuguese Refrigerator</a><br><br>
-        For Prelim Core: <a href="campaign/button_page1.html">What's in a Button?</a>
-    <br>
-  </ul>
-  <div class="hidden">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="click-link">See Levels 1–4</a>
+        <div id="levels" style="display: none">
             <ul>
+              <br>
             <a href="webzine/webzine_level1.html">Level 1</a><br>
             <a href="webzine/webzine_level2.html">Level 2</a><br>
             <a href="webzine/webzine_level3.html">Level 3</a><br>
             <a href="webzine/webzine_level4_home.html">Level 4</a><br>
           </ul>
         </div>
+          <br><br>
+        Project 2 (Billboard): <a href="butchcamp/index.html">Butchcamp</a><br><br>
+        Project 3 (Website for One): <a href="portuguese_refrigerator/index.html">Portuguese Refrigerator</a><br><br>
+        For Prelim Core: <a href="campaign/button_page1.html">What's in a Button?</a>
+    <br>
+  </ul>
     <br>
     <br>
     <br>
     <br>
-
     <div>
-        <a href="http://software-for-people.net/">Software for People</a>
+        &#10047; <a href="http://software-for-people.net/">Software for People</a>
       </div>
       <br>
-      <script>
-      const link = document.querySelector('.click-link');
-const hiddenDiv = document.querySelector('.hidden');
-link.addEventListener('click', function(event) {
-  event.preventDefault();
-  hiddenDiv.classList.toggle('show');
-});
+
+<script> 
+  document.getElementById('click-link').onclick=function() {
+
+    console.log("link clicked!");
+
+    if (document.getElementById("levels").style.display == "block" ) {
+      document.getElementById("levels").style.display="none"; 
+    } else {
+      document.getElementById("levels").style.display="block";  
+    }  
+  }
 </script>
+
   </body>
 </html>
