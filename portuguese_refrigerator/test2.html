@@ -25,27 +25,20 @@
       const wordElement = document.getElementById('word-of-the-day');
       wordElement.textContent = words[currentWordIndex];
       wordElement.addEventListener('click', changeWord);
-      wordElement.addEventListener('touchstart', changeWord);
-      wordElement.addEventListener('touchend', changeWord);
     }
 
-    function changeWord(event) {
+    function changeWord() {
       const wordElement = document.getElementById('word-of-the-day');
       const currentWord = wordElement.textContent;
       const translationIndex = words.indexOf(currentWord);
-
-      if (event.type === 'touchstart' || event.type === 'click') {
-        // Display the translation when the touch/click event starts
-        if (translationIndex !== -1) {
-          wordElement.textContent = translations[translationIndex];
-        }
-      } else if (event.type === 'touchend') {
-        // Display the original word when the touch/click event ends
-        wordElement.textContent = words[currentWordIndex];
+      if (translationIndex !== -1) {
+        wordElement.textContent = translations[translationIndex];
       }
+      wordElement.removeEventListener('click', changeWord);
+      wordElement.addEventListener('click', displayWordOfTheDay);
     }
-  
-    displayWordOfTheDay();
+
+    window.onload = displayWordOfTheDay;
   </script>
 </body>
 </html>
