@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portuguese Refrigerator</title>
+  <link rel="icon" type="image/png" href="fav.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div>
+    <p id="word-of-the-day"></p>
+  </div>
+
+  <script>
+    const words = ['encolher', 'decorativo', 'vigente'];
+    const translations = ['to shrug', 'decorative', 'current'];
+    let currentWordIndex = -1;
+
+    function displayWordOfTheDay() {
+      const today = new Date();
+      const dayOfMonth = today.getDate();
+      currentWordIndex = dayOfMonth % words.length;
+      const wordElement = document.getElementById('word-of-the-day');
+      wordElement.textContent = words[currentWordIndex];
+      wordElement.addEventListener('click', changeWord);
+      wordElement.addEventListener('touchstart', changeWord);
+      wordElement.addEventListener('touchend', changeWord);
+    }
+
+    function changeWord(event) {
+      const wordElement = document.getElementById('word-of-the-day');
+      const currentWord = wordElement.textContent;
+      const translationIndex = words.indexOf(currentWord);
+
+      if (event.type === 'touchstart' || event.type === 'click') {
+        // Display the translation when the touch/click event starts
+        if (translationIndex !== -1) {
+          wordElement.textContent = translations[translationIndex];
+        }
+      } else if (event.type === 'touchend') {
+        // Display the original word when the touch/click event ends
+        wordElement.textContent = words[currentWordIndex];
+      }
+    }
+  
+    displayWordOfTheDay();
+  </script>
+</body>
+</html>

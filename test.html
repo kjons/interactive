@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portuguese Refrigerator</title>
+  <link rel="icon" type="image/png" href="fav.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div>
+    <p id="word-of-the-day"></p>
+  </div>
+  
+<script>
+function displayWordOfTheDay() {
+  const words = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'pineapple'];
+  const today = new Date();
+  const dayOfMonth = today.getDate();
+  const index = dayOfMonth % words.length;
+  const wordElement = document.getElementById('word-of-the-day');
+  wordElement.textContent = words[index];
+}
+
+window.onload = displayWordOfTheDay;
+</script>
+</body>
+</html>

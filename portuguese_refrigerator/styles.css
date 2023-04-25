@@ -1,0 +1,25 @@
+@font-face {
+      font-family: Selavy; 
+      src: url("Selavy.otf");
+    }
+
+body {
+  font-family: Selavy; Helvetica;
+      font-size: 4em;
+      text-align: center;
+      color: black;
+      background-image: url("background.jpg");  
+      background-color: lightpink;
+    }
+
+p {
+  display: block;
+  margin-top: 200px;
+  margin-bottom: 100px;
+
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 90vw;
+  }
