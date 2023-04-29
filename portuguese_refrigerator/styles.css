@@ -1,19 +1,9 @@
 @font-face {
-      font-family: Selavy; 
-      src: url("Selavy.otf");
-    }
-
-@font-face {
       font-family: Cinetype; 
       src: url("GT-Cinetype-Mono.otf");
     }
 
 body {
-  font-family: Cinetype; Helvetica;
-      font-size: 15vw;
-      text-align: center;
-      color: black;
-      -webkit-text-stroke: 2px orangered;
       background-image: url("background.jpg"); 
       background-size: 600px 1000px;
       background-position: center top;
@@ -21,13 +11,30 @@ body {
       background-color: orangered;
     }
 
-p {
+#word-of-the-day {
   display: block;
   margin-top: 150px;
   margin-bottom: 100px;
+  font-family: Cinetype; Helvetica;
+  font-size: 15vw;
+  text-align: center;
+  color: black;
+  -webkit-text-stroke: 2px orangered;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+#date {
+  display: block;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Cinetype; Helvetica;
+  font-size: 18px;
+  text-align: center;
+  color: black;
 }
 
 @media screen and (min-width: 600px) {
