@@ -9,10 +9,10 @@
     body {
       text-align: center;
       line-height: 1.25;
-      font-size: 150%;
+      font-size: 2em;
       font-family: Helvetica, sans-serif;
       padding: 10vw;
-      margin-top: 10vw;
+      margin-top: 30vw;
       color: white;
       background-color: black;
     } 
@@ -23,25 +23,26 @@
       color: orange;
     }
     img {
-      height: 300px;
+      height: 25vh;
       max-width: 100%;
-      display:inline;
+      display:inline-block;
     }
-   @media (min-width: 600px) {
-      .mobile-first .sales-points {
-        display: flex;
-        justify-content: space-between;
-      }
-      .mobile-first .sales-point {
-        width: 30%;
-      }
-     }
-     @media screen and (min-width: 800px) {
+     @media screen and (min-width: 600px) {
       body {
+        font-size: 1.5em;
         margin-top: 10vh;
         padding-top: 5vh;
         padding-left: 15vw;
         padding-right: 15vw;
       }
+      img {
+      height: 300px;
+      max-width: 100%;
+      display:inline-block;
+      position: absolute;
+      top: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
      }
      
