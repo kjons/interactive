@@ -185,21 +185,21 @@ a:hover:after {
 .header {
   text-align: left;
   font-size: 2em;
-  font-family: Apercu;
+  font-family: Apercu; Helvetica;
   padding-top: 2em;
   padding-bottom:1em;
 }
 h3 {
   letter-spacing: 1px;
   font-size:1.25em;
-  font-family: Apercu;
+  font-family: Apercu; Helvetica;
   color: black;
   line-height:1.25em;
   margin-right: none;
 }
 h4 {
   letter-spacing: 1px;
-  font-family: Apercu;
+  font-family: Apercu; Helvetica;
   font-size: .75em;
   color: black;
   line-height:1.25em;
