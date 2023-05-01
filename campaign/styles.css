@@ -2,47 +2,41 @@
       font-family: Grotesk; 
       src: url("fonts/AkzidenzGroteskLight.ttf");
     }
-      @font-face { 
-        font-family: Apercu;
-        src: url("fonts/ApercuMonoProBold.ttf");
-    }
     body {
       text-align: center;
       line-height: 1.25;
       font-size: 2em;
       font-family: Helvetica, sans-serif;
-      padding: 10vw;
-      margin-top: 30vw;
+      margin-top: 10vh;
+      padding-top: 5vh;
+      padding-left: 15vw;
+      padding-right: 15vw;
       color: white;
       background-color: black;
-    } 
+      }
+      img {
+      height: 25vh;
+      max-width: 100%;
+      display:inline-block;
+    }
     a {
       color: white;
     }
     a:hover{
       color: orange;
     }
-    img {
+  @media screen and (min-width: 600px) {
+      body {
+      line-height: 1.25;
+      font-size: 3em;
+      font-family: Helvetica, sans-serif;
+      padding: 10vw;
+      margin-top: 5vw;
+    } 
+  img {
       height: 25vh;
       max-width: 100%;
       display:inline-block;
-    }
-     @media screen and (min-width: 600px) {
-      body {
-        font-size: 1.5em;
-        margin-top: 10vh;
-        padding-top: 5vh;
-        padding-left: 15vw;
-        padding-right: 15vw;
-      }
-      img {
-      height: 300px;
-      max-width: 100%;
-      display:inline-block;
-      position: absolute;
-      top: 300px;
-      left: 50%;
-      transform: translateX(-50%);
     }
      }
      
