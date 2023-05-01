@@ -22,10 +22,10 @@ body {
     a:hover{
       color: #fbc4ab;
     }
-  @media screen and (min-width: 700px) {
+  @media (min-width: 700px) {
       body {
       line-height: 1.25;
-      font-size: 3em;
+      font-size: 2em;
       font-family: Helvetica, sans-serif;
       padding-left: 10vw;
       padding-right: 10vw;
