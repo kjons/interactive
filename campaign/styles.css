@@ -1,8 +1,4 @@
-@font-face {
-      font-family: Grotesk; 
-      src: url("fonts/AkzidenzGroteskLight.ttf");
-    }
-    body {
+body {
       text-align: center;
       line-height: 1.25;
       font-size: 2em;
